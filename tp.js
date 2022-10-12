@@ -31,13 +31,25 @@ somme(20,10);*/
 
 // 4) Le foreach
 
-let frameworks = ["Spring","Symfony","React Native"];
+//let frameworks = ["Spring","Symfony","React Native"];
 /*for(let framework of frameworks)
 {
     console.log(framework);
 }*/
-for(let [index, framework] of frameworks.entries())
+/*for(let [index, framework] of frameworks.entries())
 {
     console.log(`Indice : ${index} -- Valeur : ${framework}`);
+}*/
+
+// 5) Arrow function
+/*
+function somme(a = 0,b = 0)
+{
+    console.log(`La somme de ${a} + ${b} = ${a+b}`)
 }
 
+somme(10,2);*/
+
+// version Arrow function
+let somme = (a,b) =>  console.log(`La somme de ${a} + ${b} = ${a+b}`);
+somme(10,2);
