@@ -51,5 +51,37 @@ function somme(a = 0,b = 0)
 somme(10,2);*/
 
 // version Arrow function
-let somme = (a,b) =>  console.log(`La somme de ${a} + ${b} = ${a+b}`);
-somme(10,2);
+/*let somme = (a,b) =>  console.log(`La somme de ${a} + ${b} = ${a+b}`);
+somme(10,2);*/
+/*
+let tab = [10,14,8,24,33,2];
+
+tab.sort((a,b)=>b-a);   // tri par ordre décroisant
+for(let v of tab)
+{
+    console.log(v);
+}*/
+
+// 6) ES 8 : async/await
+function resolveAfter3Seconds() {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve('resolved');
+      }, 3000);
+    });
+  }
+  
+  async function asyncCall() {
+    console.log('calling');
+    const result = await resolveAfter3Seconds();
+    console.log("Autre traitement...");
+    console.log(result);
+    // expected output: "resolved"
+  }
+  
+function classicCall(){
+    console.log("classicCall");
+};
+  asyncCall();  // traitement bloquant pendant 3 secondes
+  classicCall();
+  
