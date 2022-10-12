@@ -63,6 +63,7 @@ for(let v of tab)
 }*/
 
 // 6) ES 8 : async/await
+/*
 function resolveAfter3Seconds() {
     return new Promise(resolve => {
       setTimeout(() => {
@@ -84,4 +85,25 @@ function classicCall(){
 };
   asyncCall();  // traitement bloquant pendant 3 secondes
   classicCall();
-  
+  */
+
+/*const arr1 = [0, 1, 2, [3, 4],[11,2,8]];
+console.log(arr1.flat());
+
+const arr2 = [0, 1, 2, [[[3, 4]]]];
+
+console.log(arr2.flat(3));*/
+
+
+const arr1 = [1, 2, [3], [4, 5], 6, []];
+
+const flattened = arr1.flatMap(num => num*2);
+
+console.log(flattened);
+
+//const arr1 = [1, 2, 3, 4, 5, 6];
+
+//const mapped = arr1.map(num => num*2);
+//console.log(mapped);
+
+
